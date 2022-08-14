@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="Bartosz Sasal"
+	<meta name="description" content="My small portfolio"
+	<meta name="keywords" content="Bartosz Sasal, Sasal"
+	<link href="build.css" rel="stylesheet" />
+	<title>About me | Bartosz Sasal</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="bg-zinc-800 scroll-smooth">
+	<div class="flex flex-col pl-8 pt-12">
+		<h1
+			class="text-3xl font-extralight tracking-wider leading-relaxed text-slate-200"
+		>
+			Hi!
+		</h1>
+		<p class="text-xl font-thin leading-8 text-slate-200">
+			My name is
+			<a
+				class="text-red-100 cursor-pointer hover:underline"
+				onclick="showAboutMe()"
+				>Bartosz Sasal</a
+			>.
+		</p>
+		<p class="text-lg font-thin leading-8 text-slate-200">
+			Former
+			<a
+				class="text-red-100 cursor-pointer hover:underline"
+				onclick="showAndroidDev()"
+				>Android developer</a
+			>
+		</p>
+		<p class="text-lg font-thin leading-8 text-slate-200">
+			Currently
+			<a
+				class="text-red-100 cursor-pointer hover:underline"
+				onclick="showCryptoResearch()"
+				>cryptocurrency researcher and trader</a
+			>
+		</p>
+		<p class="text-lg font-thin leading-8 text-slate-200">
+			Looking for future career in
+			<a
+				class="text-red-100 cursor-pointer hover:underline"
+				onclick="showSysAdmin()"
+				>system administration</a
+			>
+		</p>
+		<p class="text-lg font-thin leading-8 text-slate-200">
+			You can find me on
+			<a
+				href="https://github.com/NullBy1e"
+				class="text-red-100 cursor-pointer hover:underline"
+				>my Github</a
+			>
+		</p>
+		<p class="text-lg font-thin leading-8 text-slate-200">
+			Contact me through
+			<a
+				href="mailto: bartosz@sasal.pl"
+				class="text-red-100 cursor-pointer hover:underline"
+				>my Email</a
+			>
+		</p>
+	</div>
+	<div
+		id="custom-popup"
+		class="border border-zinc-500 rounded-lg ml-20 mt-20 mr-20 sm:ml-5 sm:mt-8 sm:mr-5"
+	></div>
+</body>
+
+<script>
+	$("#custom-popup").hide();
+	function showAndroidDev() {
+		$(document).ready(function () {
+			$("#custom-popup").load("android-development.html");
+			$("#custom-popup").show();
+		});
+	}
+	function showCryptoResearch() {
+		$(document).ready(function () {
+			$("#custom-popup").load("crypto-research.html");
+			$("#custom-popup").show();
+		});
+	}
+	function showAboutMe() {
+		$(document).ready(function () {
+			$("#custom-popup").load("about-me.html");
+			$("#custom-popup").show();
+		});
+	}
+	function showSysAdmin() {
+		$(document).ready(function () {
+			$("#custom-popup").load("sys-admin.html");
+			$("#custom-popup").show();
+		});
+	}
+</script>
