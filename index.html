@@ -22,7 +22,7 @@
 			My name is
 			<a
 				class="text-red-100 cursor-pointer hover:underline"
-				onclick="showAboutMe()"
+				onclick="loadText('about-me.html')"
 				>Bartosz Sasal</a
 			>.
 		</p>
@@ -30,7 +30,7 @@
 			Former
 			<a
 				class="text-red-100 cursor-pointer hover:underline"
-				onclick="showAndroidDev()"
+				onclick="loadText('android-development.html')"
 				>Android developer</a
 			>
 		</p>
@@ -38,7 +38,7 @@
 			Currently
 			<a
 				class="text-red-100 cursor-pointer hover:underline"
-				onclick="showCryptoResearch()"
+				onclick="loadText('crypto-research.html')"
 				>cryptocurrency researcher and trader</a
 			>
 		</p>
@@ -46,7 +46,7 @@
 			Looking for future career in
 			<a
 				class="text-red-100 cursor-pointer hover:underline"
-				onclick="showSysAdmin()"
+				onclick="loadText('sys-admin.html')"
 				>system administration</a
 			>
 		</p>
@@ -75,27 +75,9 @@
 
 <script>
 	$("#custom-popup").hide();
-	function showAndroidDev() {
+	function loadText(filename) {
 		$(document).ready(function () {
-			$("#custom-popup").load("./components/android-development.html");
-			$("#custom-popup").show();
-		});
-	}
-	function showCryptoResearch() {
-		$(document).ready(function () {
-			$("#custom-popup").load("./components/crypto-research.html");
-			$("#custom-popup").show();
-		});
-	}
-	function showAboutMe() {
-		$(document).ready(function () {
-			$("#custom-popup").load("./components/about-me.html");
-			$("#custom-popup").show();
-		});
-	}
-	function showSysAdmin() {
-		$(document).ready(function () {
-			$("#custom-popup").load("./components/sys-admin.html");
+			$("#custom-popup").load("./"+filename);
 			$("#custom-popup").show();
 		});
 	}
