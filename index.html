@@ -3,82 +3,53 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="author" content="Bartosz Sasal"/>
-	<meta name="description" content="My small portfolio"/>
-	<meta name="keywords" content="Bartosz Sasal, Sasal"/>
+	<meta name="author" content="Bartosz Sasal" />
+	<meta name="description" content="Use info inside to contact me directly" />
+	<meta name="keywords" content="Bartosz Sasal, Quasiphi, QuasiPhi" />
 	<link href="build.css" rel="stylesheet" />
 	<title>About me | Bartosz Sasal</title>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
-<body class="bg-zinc-800 scroll-smooth">
-	<div class="flex flex-col pl-8 pt-12">
-		<h1
-			class="text-3xl font-extralight tracking-wider leading-relaxed text-slate-200"
-		>
+<body class="bg-blue-50 dark:bg-blue-950">
+	<div class="flex flex-col items-center pt-12">
+		<h1 class="text-2xl font-extralight text-blue-300 dark:text-blue-200">
 			Hi!
 		</h1>
-		<p class="text-xl font-thin leading-8 text-slate-200">
+		<p class="text-xl font-thin leading-8 text-blue-700 dark:text-blue-400">
 			My name is
-			<a
-				class="text-red-100 cursor-pointer hover:underline"
-				onclick="loadText('about-me.html')"
-				>Bartosz Sasal</a
-			>.
+			<a class="text-blue-500 dark:text-blue-300">Bartosz Sasal</a>
 		</p>
-		<p class="text-lg font-thin leading-8 text-slate-200">
-			Former
+		<p class="text-lg font-thin leading-8 text-blue-700 dark:text-blue-400">
+			A ML researcher working on the
 			<a
-				class="text-red-100 cursor-pointer hover:underline"
-				onclick="loadText('android-development.html')"
-				>Android developer</a
+				href="https://github.com/quasiphi"
+				class="text-blue-400 dark:text-blue-100 cursor-pointer hover:underline"
+				>QuasiPhi</a
 			>
+			project
 		</p>
-		<p class="text-lg font-thin leading-8 text-slate-200">
-			Currently
-			<a
-				class="text-red-100 cursor-pointer hover:underline"
-				onclick="loadText('crypto-research.html')"
-				>cryptocurrency researcher and trader</a
-			>
-		</p>
-		<p class="text-lg font-thin leading-8 text-slate-200">
-			Looking for future career in
-			<a
-				class="text-red-100 cursor-pointer hover:underline"
-				onclick="loadText('sys-admin.html')"
-				>system administration</a
-			>
-		</p>
-		<p class="text-lg font-thin leading-8 text-slate-200">
+		<p class="text-lg font-thin leading-8 text-blue-700 dark:text-blue-400">
 			You can find me on
 			<a
 				href="https://github.com/NullBy1e"
-				class="text-red-100 cursor-pointer hover:underline"
-				>my Github</a
+				class="text-blue-400 dark:text-blue-100 cursor-pointer hover:underline"
+				>Github</a
+			>
+			and
+			<a
+				href="https://twitter.com/SasalBartosz"
+				class="text-blue-400 dark:text-blue-100 cursor-pointer hover:underline"
+				>Twitter</a
 			>
 		</p>
-		<p class="text-lg font-thin leading-8 text-slate-200">
-			Contact me through
+		<p class="text-lg font-thin leading-8 text-blue-700 dark:text-blue-400">
+			For all business matters contact me
 			<a
-				href="mailto: bartosz@sasal.pl"
-				class="text-red-100 cursor-pointer hover:underline"
-				>my Email</a
+				href="mailto: bartosz.sasal@quasiphi.com"
+				class="text-blue-400 dark:text-blue-100 cursor-pointer hover:underline"
+				>here</a
 			>
 		</p>
 	</div>
-	<div
-		id="custom-popup"
-		class="border border-zinc-500 rounded-lg ml-20 mt-20 mr-20 sm:ml-5 sm:mt-8 sm:mr-5"
-	></div>
 </body>
-
-<script>
-	$("#custom-popup").hide();
-	function loadText(filename) {
-		$(document).ready(function () {
-			$("#custom-popup").load("./"+filename);
-			$("#custom-popup").show();
-		});
-	}
-</script>
